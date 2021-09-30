@@ -41,8 +41,14 @@ public class Main {
 		empresa.setFantasia("Vinícius Manso Carrijo");
 		empresa.setCnpj("42.297.954/0001-58");
 		
-		Empresa empresaSalva = empresaBussiness.salvarCliente(empresa);
+		Empresa empresaSalva = empresaBussiness.salvarEmpresa(empresa);
 		System.out.println(empresaSalva);
+		
+		System.out.println("============================================================================================================");
+		System.out.println("Buscar a Empresa");
+		
+		Empresa empresaBusca = empresaBussiness.buscarEmpresa(44L);
+		System.out.println(empresaBusca);
 
 		
 		System.out.println("============================================================================================================");

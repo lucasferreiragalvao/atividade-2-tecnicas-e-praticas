@@ -11,12 +11,12 @@ public class EmpresaBussiness {
 		this.empresaDAO = dao;
 	}
 	
-	public Empresa salvarCliente(Empresa empresa) {
+	public Empresa salvarEmpresa(Empresa empresa) {
 		if( empresa == null ) {
 			throw new RuntimeException("Empresa não informada!");	
 		}
 		
-		if ( empresa.getFantasia().isEmpty() ) {
+		if (empresa.getFantasia().isEmpty() ) {
 			throw new RuntimeException("Nome fantasia requerido");
 		}
 		
@@ -25,6 +25,10 @@ public class EmpresaBussiness {
 		}
 		
 		return this.empresaDAO.salvar(empresa);
+	}
+	
+	public Empresa buscarEmpresa(Long id) {
+		return this.empresaDAO.buscar(id);
 	}
 	
 }
