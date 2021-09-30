@@ -48,7 +48,6 @@ public class Main {
 		
 		Produto produtoSalvo = produtoBussiness.salvarProduto(produto);
 		System.out.println(produtoSalvo);
-		
 	}
 
 }
