@@ -13,7 +13,7 @@ public class ClienteBussines {
 	
 	public Cliente salvarCliente(Cliente cliente) {
 		if( cliente == null ) {
-			throw new RuntimeException("Cliente n„o informado!");	
+			throw new RuntimeException("Cliente n√£o informado!");	
 		}
 		
 		if ( cliente.getNome().isEmpty() ) {
@@ -21,7 +21,7 @@ public class ClienteBussines {
 		}
 		
 		if ( cliente.getCpf().isEmpty() ) {
-			throw new RuntimeException("Cpf requerido");	
+			throw new RuntimeException("CPF requerido");	
 		}
 		
 		return this.clienteDAO.salvar(cliente);
