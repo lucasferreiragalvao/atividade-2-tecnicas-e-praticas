@@ -5,6 +5,7 @@ public class Empresa {
 	private String fantasia;
 	private String cnpj;
 	
+	
 	public Long getId() {
 		return id;
 	}
