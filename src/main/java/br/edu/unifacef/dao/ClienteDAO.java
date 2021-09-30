@@ -5,9 +5,13 @@ import br.edu.unifacef.model.Cliente;
 public class ClienteDAO {
 
 	public Cliente salvar( Cliente cliente ) {
-		cliente.setId(111L);
+		try {
+			cliente.setId(111L);
 		
-		return cliente;
+			return cliente;
+		} catch (RuntimeException e) {
+			throw new RuntimeException(e.getMessage());
+		}
 	}
 	
 }

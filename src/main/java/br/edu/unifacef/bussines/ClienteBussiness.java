@@ -12,6 +12,7 @@ public class ClienteBussiness {
 	}
 	
 	public Cliente salvarCliente(Cliente cliente) {
+		
 		if( cliente == null ) {
 			throw new RuntimeException("Cliente não informado!");	
 		}
@@ -25,5 +26,6 @@ public class ClienteBussiness {
 		}
 		
 		return this.clienteDAO.salvar(cliente);
+		
 	}
 }
