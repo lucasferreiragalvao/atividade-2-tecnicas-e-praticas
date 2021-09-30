@@ -4,14 +4,17 @@ import br.edu.unifacef.bussines.ClienteBussiness;
 import br.edu.unifacef.bussines.EmpresaBussiness;
 import br.edu.unifacef.bussines.EnderecoBussiness;
 import br.edu.unifacef.bussines.ProdutoBussiness;
+import br.edu.unifacef.bussines.VendaBussiness;
 import br.edu.unifacef.dao.ClienteDAO;
 import br.edu.unifacef.dao.EmpresaDAO;
 import br.edu.unifacef.dao.EnderecoDAO;
 import br.edu.unifacef.dao.ProdutoDAO;
+import br.edu.unifacef.dao.VendaDAO;
 import br.edu.unifacef.model.Cliente;
 import br.edu.unifacef.model.Empresa;
 import br.edu.unifacef.model.Endereco;
 import br.edu.unifacef.model.Produto;
+import br.edu.unifacef.model.Venda;
 
 public class Main {
 
@@ -68,6 +71,19 @@ public class Main {
 		
 		Endereco enderecoSalvo = enderecoBussiness.salvarEndereco(endereco);
 		System.out.println(enderecoSalvo);
+		
+		System.out.println("============================================================================================================");
+		System.out.println("Criando uma Venda");
+		Venda venda = new Venda();
+		VendaBussiness vendaBussinness = new VendaBussiness(new VendaDAO());
+		
+		venda.setProduto(produtoSalvo);
+		venda.setCliente(clienteSalvo);
+		venda.setEndereco(enderecoSalvo);
+		venda.setEmpresa(empresaSalva);
+		
+		Venda vendaSalva = vendaBussinness.salvarVenda(venda);
+		System.out.println(vendaSalva);
 	}
 
 }
