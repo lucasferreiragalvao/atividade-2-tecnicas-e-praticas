@@ -3,11 +3,11 @@ package br.edu.unifacef.bussines;
 import br.edu.unifacef.dao.EmpresaDAO;
 import br.edu.unifacef.model.Empresa;
 
-public class EmpresaBussines {
+public class EmpresaBussiness {
 
 	private EmpresaDAO empresaDAO;
 	
-	public EmpresaBussines(EmpresaDAO dao) {
+	public EmpresaBussiness(EmpresaDAO dao) {
 		this.empresaDAO = dao;
 	}
 	

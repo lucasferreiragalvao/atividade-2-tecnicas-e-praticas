@@ -1,13 +1,16 @@
 package br.edu.unifacef;
 
-import br.edu.unifacef.bussines.ClienteBussines;
-import br.edu.unifacef.bussines.EmpresaBussines;
+import br.edu.unifacef.bussines.ClienteBussiness;
+import br.edu.unifacef.bussines.EmpresaBussiness;
+import br.edu.unifacef.bussines.EnderecoBussiness;
 import br.edu.unifacef.bussines.ProdutoBussiness;
 import br.edu.unifacef.dao.ClienteDAO;
 import br.edu.unifacef.dao.EmpresaDAO;
+import br.edu.unifacef.dao.EnderecoDAO;
 import br.edu.unifacef.dao.ProdutoDAO;
 import br.edu.unifacef.model.Cliente;
 import br.edu.unifacef.model.Empresa;
+import br.edu.unifacef.model.Endereco;
 import br.edu.unifacef.model.Produto;
 
 public class Main {
@@ -17,26 +20,28 @@ public class Main {
 		System.out.println("============================================================================================================");
 		System.out.println("Criando o Cliente");
 		Cliente cliente = new Cliente();
-		ClienteBussines clienteBussines = new ClienteBussines( new ClienteDAO() );
+		ClienteBussiness clienteBussiness = new ClienteBussiness( new ClienteDAO() );
 		
 		cliente.setNome("Vinícius Manso Carrijo");
 		cliente.setCpf("448.071.858.37");
 		cliente.setSexo('M');
 		
-		Cliente clienteSalvo = clienteBussines.salvarCliente(cliente);		
+		Cliente clienteSalvo = clienteBussiness.salvarCliente(cliente);		
 		System.out.println(clienteSalvo);
 
+		
 		System.out.println("============================================================================================================");
 		System.out.println("Criando a Empresa");
 		Empresa empresa = new Empresa();
-		EmpresaBussines empresaBussines = new EmpresaBussines( new EmpresaDAO() );
+		EmpresaBussiness empresaBussiness = new EmpresaBussiness( new EmpresaDAO() );
 		
 		empresa.setFantasia("Vinícius Manso Carrijo");
 		empresa.setCnpj("42.297.954/0001-58");
 		
-		Empresa empresaSalva = empresaBussines.salvarCliente(empresa);
+		Empresa empresaSalva = empresaBussiness.salvarCliente(empresa);
 		System.out.println(empresaSalva);
 
+		
 		System.out.println("============================================================================================================");
 		System.out.println("Criando o Produto");
 		Produto produto = new Produto();
@@ -48,6 +53,21 @@ public class Main {
 		
 		Produto produtoSalvo = produtoBussiness.salvarProduto(produto);
 		System.out.println(produtoSalvo);
+		
+		
+		System.out.println("============================================================================================================");
+		System.out.println("Criando um endereço");
+		Endereco endereco = new Endereco();
+		EnderecoBussiness enderecoBussiness = new EnderecoBussiness(new EnderecoDAO());
+	
+		endereco.setPais("Brasil");
+		endereco.setCidade("Franca");
+		endereco.setBairro("São Luis II");
+		endereco.setRua("João Nestor dos Santos");
+		endereco.setNumero("2550");
+		
+		Endereco enderecoSalvo = enderecoBussiness.salvarEndereco(endereco);
+		System.out.println(enderecoSalvo);
 	}
 
 }
