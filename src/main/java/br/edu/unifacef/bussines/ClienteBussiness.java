@@ -3,11 +3,11 @@ package br.edu.unifacef.bussines;
 import br.edu.unifacef.dao.ClienteDAO;
 import br.edu.unifacef.model.Cliente;
 
-public class ClienteBussines {
+public class ClienteBussiness {
 	
 	private ClienteDAO clienteDAO;
 	
-	public ClienteBussines(ClienteDAO dao) {
+	public ClienteBussiness(ClienteDAO dao) {
 		this.clienteDAO = dao;
 	}
 	
