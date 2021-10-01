@@ -8,10 +8,8 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import br.edu.unifacef.bussines.ClienteBussiness;
 import br.edu.unifacef.bussines.EmpresaBussiness;
 import br.edu.unifacef.dao.EmpresaDAO;
-import br.edu.unifacef.model.Cliente;
 import br.edu.unifacef.model.Empresa;
 
 

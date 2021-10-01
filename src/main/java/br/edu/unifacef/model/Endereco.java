@@ -55,11 +55,12 @@ public class Endereco {
 	public void setPais(String pais) {
 		this.pais = pais.trim();
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Endereco [numero=" + numero + ", rua=" + rua + ", bairro=" + bairro + ", cidade=" + cidade + ", pais="
-				+ pais + "]";
+		return "Endereco [id=" + id + ", numero=" + numero + ", rua=" + rua + ", bairro=" + bairro + ", cidade="
+				+ cidade + ", pais=" + pais + "]";
 	}
+	
 	
 }
