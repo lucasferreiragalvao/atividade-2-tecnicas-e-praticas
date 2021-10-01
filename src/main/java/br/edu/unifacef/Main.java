@@ -79,6 +79,12 @@ public class Main {
 		System.out.println(enderecoSalvo);
 		
 		System.out.println("============================================================================================================");
+		System.out.println("Buscando um Endereço");
+		
+		Endereco enderecoBusca = enderecoBussiness.buscarEndereco(122L);
+		System.out.println(enderecoBusca);
+		
+		System.out.println("============================================================================================================");
 		System.out.println("Criando uma Venda");
 		Venda venda = new Venda();
 		VendaBussiness vendaBussinness = new VendaBussiness(new VendaDAO());

@@ -40,4 +40,8 @@ public class EnderecoBussiness {
 		return this.enderecoDAO.salvar(endereco);
 	}
 	
+	public Endereco buscarEndereco(Long id) {
+		return this.enderecoDAO.buscar(id);
+	}
+	
 }
