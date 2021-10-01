@@ -6,7 +6,7 @@ public class Venda {
 	private Produto produto;
 	private Empresa empresa;
 	private Endereco endereco;
-	private double desconto;
+	private Double desconto;
 	
 	public Long getId() {
 		return id;
@@ -53,7 +53,7 @@ public class Venda {
 		return desconto;
 	}
 
-	public void setDesconto(double desconto) {
+	public void setDesconto(Double desconto) {
 		this.desconto = desconto;
 	}
 

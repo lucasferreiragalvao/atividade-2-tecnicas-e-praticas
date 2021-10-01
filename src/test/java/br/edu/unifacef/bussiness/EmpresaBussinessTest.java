@@ -113,7 +113,7 @@ public class EmpresaBussinessTest {
 		try {
 			empresaBussiness.salvarEmpresa(novaEmpresa);
 		} catch ( RuntimeException e ) {
-			assertEquals(e.getMessage(), "Erro ao estabelecer conexão com banco");			
+			assertEquals(e.getMessage(), "Erro ao estabelecer conexão com banco");
 		}
 	}
 
