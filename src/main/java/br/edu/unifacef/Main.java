@@ -63,6 +63,12 @@ public class Main {
 		Produto produtoSalvo = produtoBussiness.salvarProduto(produto);
 		System.out.println(produtoSalvo);
 		
+		System.out.println("============================================================================================================");
+		System.out.println("Buscando o Produto");
+		
+		Produto produtoBusca = produtoBussiness.buscarProduto(122L);
+		System.out.println(produtoBusca);
+		
 		
 		System.out.println("============================================================================================================");
 		System.out.println("Criando um endereço");

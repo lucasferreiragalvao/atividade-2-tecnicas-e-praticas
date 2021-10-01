@@ -27,4 +27,8 @@ public class ProdutoBussiness {
 		
 		return produtoDAO.salvar(produto);	
 	}
+	
+	public Produto buscarProduto(Long id) {
+		return produtoDAO.buscar(id);
+	}
 }
