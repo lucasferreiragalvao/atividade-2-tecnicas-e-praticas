@@ -40,9 +40,7 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", sexo=" + sexo + ", getId()=" + getId()
-				+ ", getNome()=" + getNome() + ", getCpf()=" + getCpf() + ", getSexo()=" + getSexo() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
-	}
+		return "Cliente [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", sexo=" + sexo + "]";
+	}	
 	
 }
