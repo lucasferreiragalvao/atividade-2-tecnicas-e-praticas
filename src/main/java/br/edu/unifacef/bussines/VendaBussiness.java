@@ -16,6 +16,10 @@ public class VendaBussiness {
 			throw new RuntimeException("Venda não informada!");
 		}
 		
+		if(venda.getCliente() == null) {
+			throw new RuntimeException("Cliente não informado!");
+		}
+		
 		if(venda.getEmpresa() == null) {
 			throw new RuntimeException("Empresa não informada!");
 		}
